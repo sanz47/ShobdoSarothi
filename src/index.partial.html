@@ -1,0 +1,1730 @@
+<nav
+  style="
+    position: sticky;
+    top: 0;
+    height: fit-content;
+    background-color: beige;
+    padding: 15px;
+  "
+>
+  <div
+    style="display: flex; flex-direction: row; justify-content: space-between"
+  >
+    <p style="font-size: larger; font-weight: 600">Demo page</p>
+    <button>
+      <img
+        id="mic-on"
+        width="24"
+        height="24"
+        src="https://img.icons8.com/parakeet/48/microphone.png"
+        alt="microphone"
+        style="display: none"
+        onclick="stop()"
+      />
+      <img
+        id="mic-off"
+        width="24"
+        height="24"
+        src="https://img.icons8.com/parakeet/48/no-microphone.png"
+        alt="no-microphone"
+        onclick="start()"
+      />
+    </button>
+  </div>
+</nav>
+
+<div class="section" id="one">
+  <h1>Welcome to Shobdosharothi.</h1>
+  <h2>Let your voice be your guide</h2>
+  <p>
+    Here you can review the supported voice commands and play with them. To get
+    started, click the mic icon on the top right, and say 'navigate'. Out loud.
+    Then you can say 'one', 'two'.. to relate to the menu item. Then 'navigate'
+    again'. Etc etc.
+  </p>
+</div>
+<div class="section" id="two">
+  <button onclick="location.href='https://www.example.com/playa-negra';">Playa Negra on the Caribbean coast</button>
+  <a href="https://www.example.com/playa-negra">
+    <img src="https://www.example.com/images/playa-negra.jpg" alt="Playa Negra">
+  </a>
+</div>
+<div class="section" id="three">
+  <button onclick="location.href='https://www.example.com/views';">Views an that</button>
+  <a href="https://www.example.com/views">
+    <img src="https://www.example.com/images/views.jpg" alt="Views">
+  </a>
+</div>
+<div class="section" id="four">
+  <button onclick="location.href='https://www.example.com/arenal-volcano';">Arenal volcano; it's a live one</button>
+  <a href="https://www.example.com/arenal-volcano">
+    <img src="https://www.example.com/images/arenal-volcano.jpg" alt="Arenal Volcano">
+  </a>
+</div>
+<div class="section" id="five">
+  <button onclick="location.href='https://www.example.com/monteverde-cloud-forest';">Monteverde Cloud Forest</button>
+  <a href="https://www.example.com/monteverde-cloud-forest">
+    <img src="https://www.example.com/images/monteverde-cloud-forest.jpg" alt="Monteverde Cloud Forest">
+  </a>
+</div>
+<div class="section" id="six">
+  <button onclick="location.href='https://www.example.com/jungle-pool';">Jungle + pool = noice</button>
+  <a href="https://www.example.com/jungle-pool">
+    <img src="https://www.example.com/images/jungle-pool.jpg" alt="Jungle Pool">
+  </a>
+</div>
+
+<div class="menu">
+  <a class="close" onclick="closeMenu()">Close</a>
+  <nav>
+    <ul>
+      <li>
+        <a href="#two">First photo</a>
+      </li>
+      <li>
+        <a href="#three">Another image</a>
+      </li>
+      <li>
+        <a href="#four">Link three</a>
+      </li>
+      <li>
+        <a href="#five">Fourth one</a>
+      </li>
+      <li>
+        <a href="#six">Last link</a>
+      </li>
+    </ul>
+  </nav>
+</div>
+<div style="margin: 150px">
+  <h3 id="speech-recognition-modules">Supported voice command modules</h3>
+
+  <ul class="collapsible modules" data-collapsible="accordion">
+    <li class="active">
+      <div class="collapsible-header active" role="button">
+        <i class="fa fa-arrow-down"></i>Auto Scrolling
+      </div>
+      <div class="collapsible-body" style="display: block">
+        <p>Useful to start a continue scroll down</p>
+
+        <h3>root <span class="context-id">root</span></h3>
+
+        <table class="bordered striped">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Group</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>স্বয়ংক্রিয় স্ক্রল</td>
+              <td>Scroll</td>
+              <td>Automatic scroll down</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>Auto Scrolling <span class="context-id">autoScroll</span></h3>
+
+        <table class="bordered striped">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Group</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>বন্ধ করুন</td>
+              <td>Control scrolling</td>
+              <td>Stop scrolling</td>
+            </tr>
+
+            <tr>
+              <td>দ্রুত করুন</td>
+              <td>Control scrolling</td>
+              <td>Increase scrolling speed</td>
+            </tr>
+
+            <tr>
+              <td>ধীরে করুন</td>
+              <td>Control scrolling</td>
+              <td>Decrease scrolling speed</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header" role="button">
+        <i class="fa fa-mouse-pointer"></i>Click
+      </div>
+      <div class="collapsible-body">
+        <p>Perform a "click" over a selected element</p>
+
+        <h3>root <span class="context-id">root</span></h3>
+
+        <table class="bordered striped">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Group</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>ক্লিক</td>
+              <td>Click something</td>
+              <td>Executes a "click" over an element</td>
+            </tr>
+
+            <tr>
+              <td>টিপুন</td>
+              <td>Click something</td>
+              <td>Executes a "click" over an element</td>
+            </tr>
+
+            <tr>
+              <td>click audio</td>
+              <td>Click something</td>
+              <td>Executes a "click" over a audio</td>
+            </tr>
+
+            <tr>
+              <td>click button</td>
+              <td>Click something</td>
+              <td>Executes a "click" over a button</td>
+            </tr>
+
+            <tr>
+              <td>click checkbox</td>
+              <td>Click something</td>
+              <td>Executes a "click" over a checkbox</td>
+            </tr>
+
+            <tr>
+              <td>click color</td>
+              <td>Click something</td>
+              <td>Executes a "click" over a color</td>
+            </tr>
+
+            <tr>
+              <td>click date</td>
+              <td>Click something</td>
+              <td>Executes a "click" over a date</td>
+            </tr>
+
+            <tr>
+              <td>click file</td>
+              <td>Click something</td>
+              <td>Executes a "click" over a file</td>
+            </tr>
+
+            <tr>
+              <td>click image</td>
+              <td>Click something</td>
+              <td>Executes a "click" over a image</td>
+            </tr>
+
+            <tr>
+              <td>click link</td>
+              <td>Click something</td>
+              <td>Executes a "click" over a link</td>
+            </tr>
+
+            <tr>
+              <td>click media</td>
+              <td>Click something</td>
+              <td>Executes a "click" over a media</td>
+            </tr>
+
+            <tr>
+              <td>click range</td>
+              <td>Click something</td>
+              <td>Executes a "click" over a range</td>
+            </tr>
+
+            <tr>
+              <td>click radio</td>
+              <td>Click something</td>
+              <td>Executes a "click" over a radio</td>
+            </tr>
+
+            <tr>
+              <td>click select</td>
+              <td>Click something</td>
+              <td>Executes a "click" over a select</td>
+            </tr>
+
+            <tr>
+              <td>click video</td>
+              <td>Click something</td>
+              <td>Executes a "click" over a video</td>
+            </tr>
+
+            <tr>
+              <td>click text</td>
+              <td>Click something</td>
+              <td>Executes a "click" over a text</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <blockquote>
+          <h3>Test voice commands</h3>
+
+          <h4>Audio</h4>
+          <p class="box">
+            Use the command "click", "click audio" or "click media"<br />
+            <audio controls="">
+              <source
+                src="https://handsfreeforweb.com/hfw-assets/audio.mp3"
+                type="audio/mpeg"
+              />
+            </audio>
+          </p>
+          <h4>Button</h4>
+          <p class="box">
+            Use the command "click" or "click button"<br />
+            <button>Click here</button>
+          </p>
+          <h4>Checkbox</h4>
+          <p class="box">
+            Use the command "click" or "click checkbox"<br />
+            <input type="checkbox" /> Option
+          </p>
+          <h4>Color</h4>
+          <p class="box">
+            Use the command "click" or "click color" <br />
+            <input type="color" />
+          </p>
+          <h4>Dates</h4>
+          <p class="box">
+            Use the command "click" or "click date"<br />
+            <input type="date" />
+          </p>
+          <h4>File</h4>
+          <p class="box">
+            Use the command "click" or "click file"<br />
+            <input type="file" />
+          </p>
+          <h4>Image</h4>
+          <p class="box">
+            Use the command "click" or "click image"<br />
+            <img src="https://handsfreeforweb.com/hfw-assets/image.png" />
+          </p>
+          <h4>Link</h4>
+          <p class="box">
+            Use the command "click" or "click link"<br />
+            <a href="#">Click here</a>
+          </p>
+          <h4>Range</h4>
+          <p class="box">
+            Use the command "click" or "click range" <br />
+            <input type="range" width="100" /><span class="thumb"
+              ><span class="value"></span
+            ></span>
+          </p>
+          <h4>Radio buttons</h4>
+          <p class="box">
+            Use the command "click" or "click radio"<br />
+            <input type="radio" name="option" value="a" /> Radio button A<br />
+            <input type="radio" name="option" value="b" /> Radio button B
+          </p>
+          <h4>Select</h4>
+          <p class="box">
+            Use the command "click" or "click select"<br />
+            <select>
+              <option value="a">Option A</option>
+              <option value="b">Option B</option>
+            </select>
+          </p>
+          <h4>Text</h4>
+          <p class="box">
+            Use the command "click" or "click text"<br />
+            <input type="text" />
+          </p>
+          <h4>Video</h4>
+          <p class="box">
+            Use the command "click", "click video" or "click media"<br />
+            <video width="320" height="240" controls="">
+              <source
+                src="https://handsfreeforweb.com/hfw-assets/video.mp4"
+                type="video/mp4"
+              />
+            </video>
+          </p>
+        </blockquote>
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header" role="button">
+        <i class="fa fa-globe"></i>Global Context
+      </div>
+      <div class="collapsible-body">
+        <p>
+          This especial module provides only global commands and translations
+        </p>
+
+        <h3>global <span class="context-id">global</span></h3>
+
+        <table class="bordered striped">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Group</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>exit</td>
+              <td>Leave the current operation</td>
+              <td>Leaves the command session</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>root <span class="context-id">root</span></h3>
+
+        <table class="bordered striped">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Group</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </li>
+    <li class="">
+      <div class="collapsible-header" role="button">
+        <i class="fa fa-globe"></i>Help
+      </div>
+      <div class="collapsible-body" style="display: none">
+        <p>Bring information about allowed commands</p>
+
+        <h3>Global <span class="context-id">global</span></h3>
+
+        <table class="bordered striped">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Group</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>help</td>
+              <td>Get more help</td>
+              <td>Displays this help dialog</td>
+            </tr>
+
+            <tr>
+              <td>help bar</td>
+              <td>Get more help</td>
+              <td>Displays a list of allowed commands</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header" role="button">
+        <i class="fa fa-picture-o"></i>Image Options
+      </div>
+      <div class="collapsible-body">
+        <p>After select an image it allows you to perform several actions</p>
+
+        <h3>Image Actions <span class="context-id">imageOptions</span></h3>
+
+        <table class="bordered striped">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Group</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>copy address</td>
+              <td>Image Actions</td>
+              <td>Copies the address of the selected image</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <blockquote>
+          <h3>Test voice commands</h3>
+          Use the command "select" or "select image"<br /><img
+            src="https://handsfreeforweb.com/hfw-assets/image.png"
+          />
+        </blockquote>
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header" role="button">
+        <i class="fa fa-keyboard-o"></i>Introduce Text
+      </div>
+      <div class="collapsible-body">
+        <p>After click over a text field it allows you to introduce text</p>
+
+        <h3>Introduce Text <span class="context-id">introduceText</span></h3>
+
+        <table class="bordered striped">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Group</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>*</td>
+              <td></td>
+              <td>Introduces text into the selected text element</td>
+            </tr>
+
+            <tr>
+              <td>exit</td>
+              <td>Leave session</td>
+              <td>Leaves the introduce text session</td>
+            </tr>
+
+            <tr>
+              <td>keyboard</td>
+              <td>Keyboard</td>
+              <td>Shows a virtual keyboard</td>
+            </tr>
+
+            <tr>
+              <td>hide keyboard</td>
+              <td>Keyboard</td>
+              <td>Close the virtual keyboard</td>
+            </tr>
+
+            <tr>
+              <td>remove</td>
+              <td>Remove some text</td>
+              <td>Removes the last word</td>
+            </tr>
+
+            <tr>
+              <td>remove line</td>
+              <td>Remove some text</td>
+              <td>Removes the last line</td>
+            </tr>
+
+            <tr>
+              <td>clean up</td>
+              <td>Remove some text</td>
+              <td>Removes the entire text</td>
+            </tr>
+
+            <tr>
+              <td>paste</td>
+              <td>Paste some text</td>
+              <td>Pastes copied text</td>
+            </tr>
+
+            <tr>
+              <td>undo</td>
+              <td>Revert a change</td>
+              <td>Undoes the last action</td>
+            </tr>
+
+            <tr>
+              <td>redo</td>
+              <td>Revert a change</td>
+              <td>Does the reverted action</td>
+            </tr>
+
+            <tr>
+              <td>submit</td>
+              <td>Send the value</td>
+              <td>Submits the current form</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <blockquote>
+          <h3>Test voice commands</h3>
+
+          <p>
+            Use the command "click" or "click text" over one of the following
+            field texts then you will be able to introduce some text
+          </p>
+          <h4>Single Line Text</h4>
+          <p class="box">
+            <input type="text" />
+          </p>
+          <h4>Multiline Text</h4>
+          <p class="box">
+            <textarea data-gramm="false" wt-ignore-input="true"></textarea>
+          </p>
+        </blockquote>
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header" role="button">
+        <i class="fa fa-link"></i>Link Options
+      </div>
+      <div class="collapsible-body">
+        <p>After select a link it allows you to perform several actions</p>
+
+        <h3>Link Actions <span class="context-id">linkOptions</span></h3>
+
+        <table class="bordered striped">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Group</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>copy</td>
+              <td>Link Actions</td>
+              <td>Copies the link text</td>
+            </tr>
+
+            <tr>
+              <td>copy address</td>
+              <td>Link Actions</td>
+              <td>Copies the address of the selected element</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <blockquote>
+          <h3>Test voice commands</h3>
+          Use the command "select" or "select link"<br /><a href="#"
+            >Select this link</a
+          >
+        </blockquote>
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header" role="button">
+        <i class="fa fa-music"></i>Media Options
+      </div>
+      <div class="collapsible-body">
+        <p>
+          After select a video or a sound player it allows you to perform
+          several actions
+        </p>
+
+        <h3>Media Actions <span class="context-id">media</span></h3>
+
+        <table class="bordered striped">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Group</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>play</td>
+              <td>Control media content</td>
+              <td>Play media</td>
+            </tr>
+
+            <tr>
+              <td>pause</td>
+              <td>Control media content</td>
+              <td>Pause media</td>
+            </tr>
+
+            <tr>
+              <td>stop</td>
+              <td>Control media content</td>
+              <td>Stop media</td>
+            </tr>
+
+            <tr>
+              <td>mute</td>
+              <td>Control volume</td>
+              <td>Mutes media</td>
+            </tr>
+
+            <tr>
+              <td>volume up</td>
+              <td>Control volume</td>
+              <td>Increases volume level</td>
+            </tr>
+
+            <tr>
+              <td>volume down</td>
+              <td>Control volume</td>
+              <td>Decreases volume level</td>
+            </tr>
+
+            <tr>
+              <td>fullscreen</td>
+              <td>Fullscreen</td>
+              <td>Makes the video fullscreen</td>
+            </tr>
+
+            <tr>
+              <td>rewind</td>
+              <td>Control media content</td>
+              <td>Rewind media 30 seconds</td>
+            </tr>
+
+            <tr>
+              <td>forward</td>
+              <td>Control media content</td>
+              <td>Forward media 30 seconds</td>
+            </tr>
+
+            <tr>
+              <td>rewind thirty seconds</td>
+              <td>Control media content</td>
+              <td>Rewind media thirty seconds</td>
+            </tr>
+
+            <tr>
+              <td>rewind one minute</td>
+              <td>Control media content</td>
+              <td>Rewind media one minute</td>
+            </tr>
+
+            <tr>
+              <td>rewind three minutes</td>
+              <td>Control media content</td>
+              <td>Rewind media three minutes</td>
+            </tr>
+
+            <tr>
+              <td>rewind five minutes</td>
+              <td>Control media content</td>
+              <td>Rewind media five minutes</td>
+            </tr>
+
+            <tr>
+              <td>rewind ten minutes</td>
+              <td>Control media content</td>
+              <td>Rewind media ten minutes</td>
+            </tr>
+
+            <tr>
+              <td>rewind fifteen minutes</td>
+              <td>Control media content</td>
+              <td>Rewind media fifteen minutes</td>
+            </tr>
+
+            <tr>
+              <td>rewind twenty minutes</td>
+              <td>Control media content</td>
+              <td>Rewind media twenty minutes</td>
+            </tr>
+
+            <tr>
+              <td>rewind thirty minutes</td>
+              <td>Control media content</td>
+              <td>Rewind media thirty minutes</td>
+            </tr>
+
+            <tr>
+              <td>rewind forty five minutes</td>
+              <td>Control media content</td>
+              <td>Rewind media forty five minutes</td>
+            </tr>
+
+            <tr>
+              <td>rewind sixty minutes</td>
+              <td>Control media content</td>
+              <td>Rewind media sixty minutes</td>
+            </tr>
+
+            <tr>
+              <td>rewind one hour</td>
+              <td>Control media content</td>
+              <td>Rewind media one hour</td>
+            </tr>
+
+            <tr>
+              <td>forward thirty seconds</td>
+              <td>Control media content</td>
+              <td>Forward media thirty seconds</td>
+            </tr>
+
+            <tr>
+              <td>forward one minute</td>
+              <td>Control media content</td>
+              <td>Forward media one minute</td>
+            </tr>
+
+            <tr>
+              <td>forward three minutes</td>
+              <td>Control media content</td>
+              <td>Forward media three minutes</td>
+            </tr>
+
+            <tr>
+              <td>forward five minutes</td>
+              <td>Control media content</td>
+              <td>Forward media five minutes</td>
+            </tr>
+
+            <tr>
+              <td>forward ten minutes</td>
+              <td>Control media content</td>
+              <td>Forward media ten minutes</td>
+            </tr>
+
+            <tr>
+              <td>forward fifteen minutes</td>
+              <td>Control media content</td>
+              <td>Forward media fifteen minutes</td>
+            </tr>
+
+            <tr>
+              <td>forward twenty minutes</td>
+              <td>Control media content</td>
+              <td>Forward media twenty minutes</td>
+            </tr>
+
+            <tr>
+              <td>forward thirty minutes</td>
+              <td>Control media content</td>
+              <td>Forward media thirty minutes</td>
+            </tr>
+
+            <tr>
+              <td>forward forty five minutes</td>
+              <td>Control media content</td>
+              <td>Forward media forty five minutes</td>
+            </tr>
+
+            <tr>
+              <td>forward sixty minutes</td>
+              <td>Control media content</td>
+              <td>Forward media sixty minutes</td>
+            </tr>
+
+            <tr>
+              <td>forward one hour</td>
+              <td>Control media content</td>
+              <td>Forward media one hour</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <blockquote>
+          <h3>Test voice commands</h3>
+
+          <p>
+            Use the command "select", "select video", "select audio" or "select
+            media" over one of the following media content
+          </p>
+          <h4>Audio</h4>
+          <p class="box">
+            <audio controls="">
+              <source
+                src="https://handsfreeforweb.com/hfw-assets/audio.mp3"
+                type="audio/mpeg"
+              />
+            </audio>
+          </p>
+          <h4>Video</h4>
+          <p class="box">
+            <video width="320" height="240" controls="">
+              <source
+                src="https://handsfreeforweb.com/hfw-assets/video.mp4"
+                type="video/mp4"
+              />
+            </video>
+          </p>
+        </blockquote>
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header" role="button">
+        <i class="fa fa-history"></i>Navigation
+      </div>
+      <div class="collapsible-body">
+        <p>
+          This module provides several commands to control the navigation. Such
+          as: go back, go forward, reload and stop the web page loading.
+        </p>
+
+        <h3>root <span class="context-id">root</span></h3>
+
+        <table class="bordered striped">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Group</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>go back</td>
+              <td>Navigation</td>
+              <td>Goes back in the browser history</td>
+            </tr>
+
+            <tr>
+              <td>go forward</td>
+              <td>Navigation</td>
+              <td>Goes forward in the browser history</td>
+            </tr>
+
+            <tr>
+              <td>reload</td>
+              <td>Navigation</td>
+              <td>Reloads the current page</td>
+            </tr>
+
+            <tr>
+              <td>stop</td>
+              <td>Navigation</td>
+              <td>Stops the loading of the current page</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header" role="button">
+        <i class="fa fa-external-link"></i>Open a website
+      </div>
+      <div class="collapsible-body">
+        <p>This module allows you to open websites.</p>
+
+        <h3>root <span class="context-id">root</span></h3>
+
+        <table class="bordered striped">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Group</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>open</td>
+              <td>Open</td>
+              <td>Open a website</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>Open <span class="context-id">open</span></h3>
+
+        <table class="bordered striped">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Group</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>*</td>
+              <td>Open</td>
+              <td>Say the name of the site you want to open</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header" role="button">
+        <i class="fa fa-tag"></i>Pick Label
+      </div>
+      <div class="collapsible-body">
+        <p>
+          This module is useful to pick the label of some element after use the
+          commands "click" or "select" and there is more than one option to
+          choose.
+        </p>
+
+        <h3>Element Picker <span class="context-id">pickLabel</span></h3>
+
+        <table class="bordered striped">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Group</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>*</td>
+              <td>Pick a number</td>
+              <td>Say the number of the selected label</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <blockquote>
+          <h3>Test voice commands</h3>
+          Use the command "click" over the following two buttons
+          <p style="margin-top: 1em; margin-bottom: 0.2em">
+            <button>Button A</button> <button>Button B</button>
+          </p>
+        </blockquote>
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header" role="button">
+        <i class="fa fa-paint-brush"></i>Pick a color
+      </div>
+      <div class="collapsible-body">
+        <p>After click over color input it allows you select a color</p>
+
+        <h3>Color Picker <span class="context-id">colorOptions</span></h3>
+
+        <table class="bordered striped">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Group</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>*</td>
+              <td></td>
+              <td>Say the number of the selected color</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <blockquote>
+          <h3>Test voice commands</h3>
+          Use the command "click" or "click color" over the color box then you
+          will be able to pick a color<br /><input type="color" />
+        </blockquote>
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header" role="button">
+        <i class="fa fa-calendar"></i>Pick a date
+      </div>
+      <div class="collapsible-body">
+        <p>After click over date input it allows you select a date</p>
+
+        <h3>Date Picker <span class="context-id">dateOptions</span></h3>
+
+        <table class="bordered striped">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Group</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>month</td>
+              <td>Switch tab</td>
+              <td>Switches to month picker</td>
+            </tr>
+
+            <tr>
+              <td>day</td>
+              <td>Switch tab</td>
+              <td>Switches to day picker</td>
+            </tr>
+
+            <tr>
+              <td>year</td>
+              <td>Switch tab</td>
+              <td>Switches to year picker</td>
+            </tr>
+
+            <tr>
+              <td>*</td>
+              <td></td>
+              <td>Say the number of the selected label</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <blockquote>
+          <h3>Test voice commands</h3>
+          Use the command "click" o "click date" over the following date input
+          then you will be able to pick a date<br /><input type="date" />
+        </blockquote>
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header" role="button">
+        <i class="fa fa-calendar"></i>Pick a date and a time
+      </div>
+      <div class="collapsible-body">
+        <p>
+          After click over date input its allow you select a date and a time
+        </p>
+
+        <h3>Datetime Picker <span class="context-id">datetimeOptions</span></h3>
+
+        <table class="bordered striped">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Group</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>month</td>
+              <td>Switch tab</td>
+              <td>Switches to month picker</td>
+            </tr>
+
+            <tr>
+              <td>day</td>
+              <td>Switch tab</td>
+              <td>Switches to day picker</td>
+            </tr>
+
+            <tr>
+              <td>year</td>
+              <td>Switch tab</td>
+              <td>Switches to year picker</td>
+            </tr>
+
+            <tr>
+              <td>hour</td>
+              <td>Switch tab</td>
+              <td>Switches to hour picker</td>
+            </tr>
+
+            <tr>
+              <td>minutes</td>
+              <td>Switch tab</td>
+              <td>Switches to minutes picker</td>
+            </tr>
+
+            <tr>
+              <td>*</td>
+              <td></td>
+              <td>Say the number of the selected label</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <blockquote>
+          <h3>Test voice commands</h3>
+          Use the command "click" o "click date" over the following datetime
+          input then you will be able to pick a date and a time<br /><input
+            type="datetime-local"
+          />
+        </blockquote>
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header" role="button">
+        <i class="fa fa-calendar"></i>Pick a month
+      </div>
+      <div class="collapsible-body">
+        <p>
+          After click over a date input it allows you to select a month of an
+          year
+        </p>
+
+        <h3>Month Picker <span class="context-id">monthOptions</span></h3>
+
+        <table class="bordered striped">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Group</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>month</td>
+              <td>Switch tab</td>
+              <td>Switches to month picker</td>
+            </tr>
+
+            <tr>
+              <td>year</td>
+              <td>Switch tab</td>
+              <td>Switches to year picker</td>
+            </tr>
+
+            <tr>
+              <td>*</td>
+              <td></td>
+              <td>Say the number of the selected label</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <blockquote>
+          <h3>Test voice commands</h3>
+          Use the command "click" or "click date" over the following date input
+          then you will be able to pick a month of a given year<br /><input
+            type="month"
+          />
+        </blockquote>
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header" role="button">
+        <i class="fa fa-clock-o"></i>Pick a time
+      </div>
+      <div class="collapsible-body">
+        <p>After click over date input its allow you to select a time</p>
+
+        <h3>Time Picker <span class="context-id">timeOptions</span></h3>
+
+        <table class="bordered striped">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Group</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>hour</td>
+              <td>Switch tab</td>
+              <td>Switches to hour picker</td>
+            </tr>
+
+            <tr>
+              <td>minutes</td>
+              <td>Switch tab</td>
+              <td>Switches to minutes picker</td>
+            </tr>
+
+            <tr>
+              <td>*</td>
+              <td></td>
+              <td>Say the number of the selected label</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <blockquote>
+          <h3>Test voice commands</h3>
+          Use the command "click" or "click date" over the following time input
+          then you will be able to pick a time<br /><input type="time" />
+        </blockquote>
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header" role="button">
+        <i class="fa fa-calendar"></i>Pick a week
+      </div>
+      <div class="collapsible-body">
+        <p>After click over date input it allows you select a week</p>
+
+        <h3>Week Picker <span class="context-id">weekOptions</span></h3>
+
+        <table class="bordered striped">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Group</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>month</td>
+              <td>Switch tab</td>
+              <td>Switches to month picker</td>
+            </tr>
+
+            <tr>
+              <td>year</td>
+              <td>Switch tab</td>
+              <td>Switches to year picker</td>
+            </tr>
+
+            <tr>
+              <td>week</td>
+              <td>Switch tab</td>
+              <td>Switches to week picker</td>
+            </tr>
+
+            <tr>
+              <td>*</td>
+              <td></td>
+              <td>Say the number of the selected label</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <blockquote>
+          <h3>Test voice commands</h3>
+          Use the command "click" o "click date" over the following date input
+          then you will be able to pick a week<br /><input type="week" />
+        </blockquote>
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header" role="button">
+        <i class="fa fa-list"></i>Pick an option
+      </div>
+      <div class="collapsible-body">
+        <p>After click over a select input it allows you to select a value.</p>
+
+        <h3>Select Value <span class="context-id">selectOptions</span></h3>
+
+        <table class="bordered striped">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Group</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>scroll up</td>
+              <td></td>
+              <td>Scroll up the option list</td>
+            </tr>
+
+            <tr>
+              <td>scroll down</td>
+              <td></td>
+              <td>Scroll down the option list</td>
+            </tr>
+
+            <tr>
+              <td>*</td>
+              <td></td>
+              <td>Say the number of the selected label</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <blockquote>
+          <h3>Test voice commands</h3>
+
+          <p style="margin-top: 1em; margin-bottom: 0.2em">
+            Use the command "click" or "click select" over the following select
+            <br />
+            <select>
+              <option value="1">ValueA</option>
+              <option value="2" selected="selected">Value B</option>
+              <option value="3">ValueC</option>
+              <option value="4">ValueD</option>
+              <option value="5">ValueE</option>
+              <option value="6">ValueF</option>
+            </select>
+          </p>
+        </blockquote>
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header" role="button">
+        <i class="fa fa-sliders"></i>Range Options
+      </div>
+      <div class="collapsible-body">
+        <p>
+          After select a link it allows you to set a value between the specified
+          minimum and maximum.
+        </p>
+
+        <h3>Range Selection <span class="context-id">rangeOptions</span></h3>
+
+        <table class="bordered striped">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Group</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>*</td>
+              <td></td>
+              <td>Say the number of the selected value</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <blockquote>
+          <h3>Test voice commands</h3>
+          Use the command "click" or "click range" over the following range
+          input
+          <p style="margin-top: 1em; margin-bottom: 0.2em">
+            <input type="range" /><span class="thumb"
+              ><span class="value"></span
+            ></span>
+          </p>
+        </blockquote>
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header" role="button">
+        <i class="fa fa-arrows"></i>Scroll the Page
+      </div>
+      <div class="collapsible-body">
+        <p>Commands useful to scroll up and down the website.</p>
+
+        <h3>root <span class="context-id">root</span></h3>
+
+        <table class="bordered striped">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Group</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>scroll down</td>
+              <td>Scroll</td>
+              <td>Performs a scroll down of the document</td>
+            </tr>
+
+            <tr>
+              <td>scroll up</td>
+              <td>Scroll</td>
+              <td>Performs a scroll up of the document</td>
+            </tr>
+
+            <tr>
+              <td>down</td>
+              <td>Scroll</td>
+              <td>Performs a scroll down of the document</td>
+            </tr>
+
+            <tr>
+              <td>up</td>
+              <td>Scroll</td>
+              <td>Performs a scroll up of the document</td>
+            </tr>
+
+            <tr>
+              <td>arrow down</td>
+              <td>Scroll</td>
+              <td>Performs a tiny scroll down</td>
+            </tr>
+
+            <tr>
+              <td>arrow up</td>
+              <td>Scroll</td>
+              <td>Performs a tiny scroll up</td>
+            </tr>
+
+            <tr>
+              <td>scroll to the top</td>
+              <td>Scroll</td>
+              <td>
+                Performs a scroll up of the document until the beginning of it
+              </td>
+            </tr>
+
+            <tr>
+              <td>scroll to the bottom</td>
+              <td>Scroll</td>
+              <td>
+                Performs a scroll down of the document until the end of it
+              </td>
+            </tr>
+
+            <tr>
+              <td>Scroll area</td>
+              <td>Scroll area</td>
+              <td>
+                When multiple scroll areas are available, allows you to pick a
+                particular area to scroll
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>Scroll Area <span class="context-id">scroll-area</span></h3>
+
+        <table class="bordered striped">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Group</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Up</td>
+              <td>Scroll Direction</td>
+              <td>Scrolls a selected element up</td>
+            </tr>
+
+            <tr>
+              <td>Down</td>
+              <td>Scroll Direction</td>
+              <td>Scrolls a selected element down</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header" role="button">
+        <i class="fa fa-search"></i>Search
+      </div>
+      <div class="collapsible-body">
+        <p>This module allows you to easily search for something.</p>
+
+        <h3>root <span class="context-id">root</span></h3>
+
+        <table class="bordered striped">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Group</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>search</td>
+              <td>Search</td>
+              <td>Search something in Google</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>Search <span class="context-id">search</span></h3>
+
+        <table class="bordered striped">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Group</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>*</td>
+              <td>Search</td>
+              <td>Say the name of what you want to search</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header" role="button">
+        <i class="fa fa-search"></i>Search text
+      </div>
+      <div class="collapsible-body">
+        <p>Search text in the current page</p>
+
+        <h3>root <span class="context-id">root</span></h3>
+
+        <table class="bordered striped">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Group</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>find text</td>
+              <td>Search inside the page</td>
+              <td>Displays text finder</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>Text finder <span class="context-id">findText</span></h3>
+
+        <table class="bordered striped">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Group</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>previous</td>
+              <td>Search inside the page</td>
+              <td>Find previous</td>
+            </tr>
+
+            <tr>
+              <td>next</td>
+              <td>Search inside the page</td>
+              <td>Find next</td>
+            </tr>
+
+            <tr>
+              <td>*</td>
+              <td>Search inside the page</td>
+              <td>Say the words you want to search</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header" role="button">
+        <i class="fa fa-bars"></i>Select
+      </div>
+      <div class="collapsible-body">
+        <p>
+          This module allows you to select an element and then be able to
+          execute commands related with the selected element
+        </p>
+
+        <h3>root <span class="context-id">root</span></h3>
+
+        <table class="bordered striped">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Group</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>select</td>
+              <td>Select an element</td>
+              <td>Useful to focus an element</td>
+            </tr>
+
+            <tr>
+              <td>select audio</td>
+              <td>Select an element</td>
+              <td>Select a audio element</td>
+            </tr>
+
+            <tr>
+              <td>select image</td>
+              <td>Select an element</td>
+              <td>Select a image element</td>
+            </tr>
+
+            <tr>
+              <td>select link</td>
+              <td>Select an element</td>
+              <td>Select a link element</td>
+            </tr>
+
+            <tr>
+              <td>select media</td>
+              <td>Select an element</td>
+              <td>Select a media element</td>
+            </tr>
+
+            <tr>
+              <td>select text</td>
+              <td>Select an element</td>
+              <td>Select a text element</td>
+            </tr>
+
+            <tr>
+              <td>select video</td>
+              <td>Select an element</td>
+              <td>Select a video element</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <blockquote>
+          <h3>Test voice commands</h3>
+
+          <h4>Audio</h4>
+          <p class="box">
+            Use the command "select", "select audio" or "select media"<br />
+            <audio controls="">
+              <source
+                src="https://handsfreeforweb.com/hfw-assets/audio.mp3"
+                type="audio/mpeg"
+              />
+            </audio>
+          </p>
+          <h4>Image</h4>
+          <p class="box">
+            Use the command "select" or "select image"<br />
+            <img src="https://handsfreeforweb.com/hfw-assets/image.png" />
+          </p>
+          <h4>Link</h4>
+          <p class="box">
+            Use the command "select" or "select link"<br />
+            <a href="#">select this</a>
+          </p>
+          <h4>Text</h4>
+          <p class="box">
+            Use the command "select" or "select text" to select this text
+          </p>
+          <h4>Video</h4>
+          <p class="box">
+            Use the command "select", "select video" or "select media"<br />
+            <video width="320" height="240" controls="">
+              <source
+                src="https://handsfreeforweb.com/hfw-assets/video.mp4"
+                type="video/mp4"
+              />
+            </video>
+          </p>
+        </blockquote>
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header" role="button">
+        <i class="fa fa-font"></i>Text options
+      </div>
+      <div class="collapsible-body">
+        <p>After select a text it allows you to perform some action.</p>
+
+        <h3>Text Actions <span class="context-id">textOptions</span></h3>
+
+        <table class="bordered striped">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Group</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>copy</td>
+              <td>Copy text</td>
+              <td>Copies the selected text</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <blockquote>
+          <h3>Test voice commands</h3>
+          Use the command "select" or "select text" to select this text
+        </blockquote>
+      </div>
+    </li>
+  </ul>
+</div>
